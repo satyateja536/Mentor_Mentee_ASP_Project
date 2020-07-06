@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+   <!-- Base Definition -->
+   <definition name="base-definition" template="/WEB-INF/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/tiles/templates/defaultHeader.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/tiles/templates/defaultMenu.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/tiles/templates/defaultFooter.jsp" />  
+   </definition>  
+   
+   <!-- User Definition -->
+   <definition name="user-definition" template="/WEB-INF/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/tiles/templates/userHeader.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/tiles/templates/defaultMenu.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/tiles/templates/defaultFooter.jsp" />  
+   </definition>  
+  
+   <!--  Before User Login   -->
+   
+   <!-- Email Page -->
+   <definition name="emailForm" extends="base-definition">  
+       <put-attribute name="title" value="EmailPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/emailForm.jsp" />  
+   </definition> 
+   
+    <definition name="success" extends="base-definition">  
+       <put-attribute name="title" value="SuccessPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/success.jsp" />  
+   </definition> 
+   
+   <definition name="error" extends="base-definition">  
+       <put-attribute name="title" value="ErrorPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/error.jsp" />  
+   </definition>
+   
+   <!-- Delete Above Definitions -->
+   
+   
+   <!-- Home Page -->
+   <definition name="Main" extends="base-definition">  
+       <put-attribute name="title" value="HomePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Main.jsp" />  
+   </definition>  
+ 
+   <!-- Mentor Intro -->
+   <definition name="Mentor-Intro" extends="base-definition">  
+       <put-attribute name="title" value="MentorIntro" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-Intro.jsp" />  
+   </definition> 
+
+   <!-- Mentee Intro -->
+   <definition name="Mentee-Intro" extends="base-definition">  
+       <put-attribute name="title" value="MenteeIntro" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-Intro.jsp" />  
+   </definition> 
+   
+   <!-- Login Page -->
+   <definition name="User-LoginPage" extends="base-definition">  
+       <put-attribute name="title" value="LoginPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/User-LoginPage.jsp" />  
+   </definition> 
+   
+   <!-- Employee Validation Page -->
+   <definition name="Employee-Validation" extends="base-definition">  
+       <put-attribute name="title" value="EmployeeValidation" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Employee-Validation.jsp" />  
+   </definition> 
+   
+   <!-- User Registration Page -->
+   <definition name="User-Registration" extends="base-definition">  
+       <put-attribute name="title" value="UserRegistration" />  
+       <put-attribute name="body" value="/WEB-INF/pages/User-Registration.jsp" />  
+   </definition> 
+   
+   <!--  Login Failure Pages   -->
+   <!-- User Failure Page -->
+   <definition name="U-Failure" extends="base-definition">  
+       <put-attribute name="title" value="UserFailure" />  
+       <put-attribute name="body" value="/WEB-INF/pages/U-Failure.jsp" />  
+   </definition> 
+   
+   <!-- User Not Registered Page -->
+   <definition name="U-NotRegistered" extends="base-definition">  
+       <put-attribute name="title" value="UserRegistrationFailure" />  
+       <put-attribute name="body" value="/WEB-INF/pages/U-NotRegistered.jsp" />  
+   </definition> 
+   
+   
+   
+   <!--  After User Login   -->
+   
+   <!-- User Home Page -->
+   <definition name="User-Home" extends="user-definition">  
+       <put-attribute name="title" value="UserHome" />  
+       <put-attribute name="body" value="/WEB-INF/pages/User-Home.jsp" />  
+   </definition> 
+   
+      <!-- Admin Home Page -->
+   <definition name="Admin-Home" extends="user-definition">  
+       <put-attribute name="title" value="AdminHome" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-Home.jsp" />  
+   </definition> 
+   
+   <!--  Admin Employee Functionalities  -->   
+   
+   <!-- New Employee Page -->
+   <definition name="Admin-NewEmployee" extends="user-definition">  
+       <put-attribute name="title" value="NewEmployeePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-NewEmployee.jsp" />  
+   </definition>
+   
+   <!-- Get Employee Details -->
+   <definition name="Admin-GetEmployeeDetails" extends="user-definition">  
+       <put-attribute name="title" value="GetEmployeeDetails" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-GetEmployeeDetails.jsp" />  
+   </definition>
+   
+   <!-- Modify Employee Page -->
+   <definition name="Admin-ModifyEmployee" extends="user-definition">  
+       <put-attribute name="title" value="ModifyEmployeePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-ModifyEmployee.jsp" />  
+   </definition>
+   
+   <!-- Find Employee Page -->
+   <definition name="Admin-FindEmployeeDetails" extends="user-definition">  
+       <put-attribute name="title" value="FindEmployeePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-FindEmployeeDetails.jsp" />  
+   </definition>
+   
+    <!-- Display Employee Details -->
+   <definition name="Admin-DisplayEmployeeDetails" extends="user-definition">  
+       <put-attribute name="title" value="DisplayEmployees" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-DisplayEmployeeDetails.jsp" />  
+   </definition>
+   
+   <!-- Admin User Functionalities -->
+   
+    <!-- Admin Get User Details -->
+   <definition name="Admin-GetUserDetails" extends="user-definition">  
+       <put-attribute name="title" value="AdminGetUser" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-GetUserDetails.jsp" />  
+   </definition>
+   
+    <!-- Admin Modify User Page -->
+   <definition name="Admin-ModifyUser" extends="user-definition">  
+       <put-attribute name="title" value="ModifyUser" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-ModifyUser.jsp" />  
+   </definition>
+  
+  <!-- Admin Course Functionalities -->
+  
+  <!-- Display Courses Page -->
+   <definition name="Admin-DisplayCourses" extends="user-definition">  
+       <put-attribute name="title" value="DisplayCourses" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-DisplayCourses.jsp" />  
+   </definition> 
+   
+   <!-- New Course Page -->
+   <definition name="Admin-NewCourse" extends="user-definition">  
+       <put-attribute name="title" value="NewCoursePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-NewCourse.jsp" />  
+   </definition> 
+   
+   <!-- Modify Course Page -->
+   <definition name="Admin-ModifyCourse" extends="user-definition">  
+       <put-attribute name="title" value="ModifyCourse" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Admin-ModifyCourse.jsp" />  
+   </definition> 
+   
+   <!-- Mentor Functionalities -->
+   
+   <!-- Mentor Home Page -->
+   <definition name="Mentor-Home" extends="user-definition">  
+       <put-attribute name="title" value="MentorHomePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-Home.jsp" />  
+   </definition>  
+   
+   <!-- Mentor Activation Page -->
+   <definition name="Mentor-ActivationPage" extends="user-definition">  
+       <put-attribute name="title" value="MentorActivationPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ActivationPage.jsp" />  
+   </definition> 
+   
+   <!-- Mentor Get Course Page -->
+   <definition name="Mentor-GetCourseDetails" extends="user-definition">  
+       <put-attribute name="title" value="GetCoursePage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-GetCourseDetails.jsp" />  
+   </definition>
+   
+   <!-- Mentor New Program Page -->
+   <definition name="Mentor-NewProgram" extends="user-definition">  
+       <put-attribute name="title" value="NewProgramPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-NewProgram.jsp" />  
+   </definition>
+   
+   <!-- Mentor Display Programs Page -->
+   <definition name="Mentor-DisplayPrograms" extends="user-definition">  
+       <put-attribute name="title" value="DisplayPrograms" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-DisplayPrograms.jsp" />  
+   </definition>
+   
+   <!-- Mentor Modify Program Page -->
+   <definition name="Mentor-ModifyProgram" extends="user-definition">  
+       <put-attribute name="title" value="ModifyProgram" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ModifyProgram.jsp" />  
+   </definition>
+  
+  <!-- Mentor Program Requests Page -->
+   <definition name="Mentor-ProgramRequests" extends="user-definition">  
+       <put-attribute name="title" value="ProgramRequests" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ProgramRequests.jsp" />  
+   </definition>
+   
+   <!-- Mentor View Request -->
+   <definition name="Mentor-ViewRequest" extends="user-definition">  
+       <put-attribute name="title" value="ViewRequest" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ViewRequest.jsp" />  
+   </definition>
+   
+   <!-- Mentor Program Sessions -->
+   <definition name="Mentor-ProgramSessions" extends="user-definition">  
+       <put-attribute name="title" value="ProgramSessions" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ProgramSessions.jsp" />  
+   </definition>
+   
+   <!-- Mentor View Active Session Page -->
+   <definition name="Mentor-ViewActiveSession" extends="user-definition">  
+       <put-attribute name="title" value="ViewActiveSession" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ViewActiveSession.jsp" />  
+   </definition>
+   
+   <!-- Mentor View Inactive Session Page -->
+   <definition name="Mentor-ViewInActiveSession" extends="user-definition">  
+       <put-attribute name="title" value="ViewInactiveSession" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentor-ViewInActiveSession.jsp" />  
+   </definition>
+   
+   <!-- Mentee Functionalities -->
+   
+   <!-- Mentee Home Page -->
+   <definition name="Mentee-Home" extends="user-definition">  
+       <put-attribute name="title" value="MenteeHome" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-Home.jsp" />  
+   </definition>
+   
+   <!-- Mentee Activation Page -->
+   <definition name="Mentee-ActivationPage" extends="user-definition">  
+       <put-attribute name="title" value="MenteeActivationPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-ActivationPage.jsp" />  
+   </definition>
+   
+   <!-- Mentee Get Program Details -->
+   <definition name="Mentee-GetProgramDetails" extends="user-definition">  
+       <put-attribute name="title" value="MenteeGetProgramDetails" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-GetProgramDetails.jsp" />  
+   </definition> 
+   
+   <!-- Mentee Display Programs Page -->
+   <definition name="Mentee-DisplayPrograms" extends="user-definition">  
+       <put-attribute name="title" value="MenteeDisplayPrograms" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-DisplayPrograms.jsp" />  
+   </definition> 
+   
+   <!-- Mentee View Program Page -->
+   <definition name="Mentee-ViewProgram" extends="user-definition">  
+       <put-attribute name="title" value="MenteeViewProgram" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-ViewProgram.jsp" />  
+   </definition> 
+   
+   <!-- Mentee Program Requests Page -->
+   <definition name="Mentee-ProgramRequests" extends="user-definition">  
+       <put-attribute name="title" value="MenteeProgramRequests" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-ProgramRequests.jsp" />  
+   </definition> 
+   
+   <!-- Mentee View Program Request Page -->
+   <definition name="Mentee-ViewProgramRequest" extends="user-definition">  
+       <put-attribute name="title" value="MenteeViewProgramRequest" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-ViewProgramRequest.jsp" />  
+   </definition> 
+   
+   <!-- Mentee View Active Session Page -->
+   <definition name="Mentee-ViewActiveSession" extends="user-definition">  
+       <put-attribute name="title" value="MenteeViewActiveSession" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-ViewActiveSession.jsp" />  
+   </definition> 
+   
+   <!-- Mentee View Inactive Session Page -->
+   <definition name="Mentee-ViewInActiveSession" extends="user-definition">  
+       <put-attribute name="title" value="MenteeViewInactiveSession" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-ViewInActiveSession.jsp" />  
+   </definition> 
+   
+   <!-- Mentee History Program Sessions Page -->
+   <definition name="Mentee-HistoryProgramSessions" extends="user-definition">  
+       <put-attribute name="title" value="MenteeHistoryProgramSessions" />  
+       <put-attribute name="body" value="/WEB-INF/pages/Mentee-HistoryProgramSessions.jsp" />  
+   </definition> 
+   
+   <!-- User Functionalities -->
+   
+   <!-- User Details Page -->
+   <definition name="User-DetailsPage" extends="user-definition">  
+       <put-attribute name="title" value="UserDetailsPage" />  
+       <put-attribute name="body" value="/WEB-INF/pages/User-DetailsPage.jsp" />  
+   </definition> 
+   
+   <!-- User Change Password Page -->
+   <definition name="User-ChangePassword" extends="user-definition">  
+       <put-attribute name="title" value="UserChangePassword" />  
+       <put-attribute name="body" value="/WEB-INF/pages/User-ChangePassword.jsp" />  
+   </definition>     
+
+</tiles-definitions>
